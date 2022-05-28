@@ -21,6 +21,7 @@ public class MainController {
      * e.g. http://localhost:8080/home?color=orange&name=Jane
      * <p>
      * Can be used with optional values.
+     * For GET query parameters are sent in URI.
      *
      * @param color first parameter of query
      * @param name  second parameter of query

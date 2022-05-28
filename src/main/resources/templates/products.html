@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+    <h1>Products</h1>
+
+    <h2>View products</h2>
+    <table>
+        <tr>
+            <th>PRODUCT NAME</th>
+            <th>PRODUCT PRICE</th>
+        </tr>
+        <tr th:each="p: ${products}">
+            <td th:text="${p.name}"></td>
+            <td th:text="${p.price}"></td>
+        </tr>
+    </table>
+
+    <h2>Add a product</h2>
+    <form action="/products" method="post">  <!--action is a program URL that process data sent by form -->
+        <label for="name" class="formlabel">Name:</label>
+        <input type="text" id="name" name="name"><br/>
+        <label for="name" class="formlabel">Price:</label>
+        <input type="number" step="any" id="price" name="price"><br/>
+        <button type="submit">Add product</button>
+    </form>
+</body>
+</html>

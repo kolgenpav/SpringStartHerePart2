@@ -1,0 +1,22 @@
+body{
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+label {
+    margin-top:5px;
+   	display:block;
+}
+
+button {
+    margin-top:5px;
+}
