@@ -16,7 +16,6 @@ public class LoginController {
     /*In the book dependency does not injected, but code does not work*/
     private final LoginProcessor loginProcessor;
 
-    @Autowired
     public LoginController(LoginProcessor loginProcessor) {
         this.loginProcessor = loginProcessor;
     }
@@ -33,7 +32,10 @@ public class LoginController {
     public String loginPost(@RequestParam String username,
                             @RequestParam String password,
                             Model model) {
-        boolean loggedIn = loginProcessor.login(username, password);
+
+        loginProcessor.setUsername(username);
+        loginProcessor.setPassword(password);
+        boolean loggedIn = loginProcessor.login();
         if (loggedIn) {
             model.addAttribute("message", "You are now logged in");
         } else {

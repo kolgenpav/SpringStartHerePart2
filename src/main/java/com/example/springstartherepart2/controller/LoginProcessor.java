@@ -1,5 +1,6 @@
 package com.example.springstartherepart2.controller;
 
+import com.example.springstartherepart2.service.LoggedUserManagementService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
@@ -13,15 +14,15 @@ import org.springframework.web.context.annotation.RequestScope;
 @RequestScope   //process data of unique request. Spring creates a new instance
 // of the class for every HTTP request
 public class LoginProcessor {
+
     /*The bean stores the credentials as attributes*/
     private String username;
     private String password;
 
-    /*In the book code is different, but does not work*/
-    public boolean login(String username, String password) {
+    public boolean login() {
         /*Get attributes from the request*/
-        this.username = username;
-        this.password = password;
+        String username = this.getUsername();
+        String password = this.getPassword();
         System.out.println(this); //for different requests will be different instance hashcode
         if ("natalie".equals(username) && "password".equals(password)) {
             return true;
