@@ -15,20 +15,30 @@ import org.springframework.web.context.annotation.RequestScope;
 // of the class for every HTTP request
 public class LoginProcessor {
 
+    private final LoggedUserManagementService loggedUserManagementService;
+
     /*The bean stores the credentials as attributes*/
     private String username;
     private String password;
+
+    public LoginProcessor(LoggedUserManagementService loggedUserManagementService) {
+        this.loggedUserManagementService = loggedUserManagementService;
+    }
 
     public boolean login() {
         /*Get attributes from the request*/
         String username = this.getUsername();
         String password = this.getPassword();
-        System.out.println(this); //for different requests will be different instance hashcode
+//        System.out.println(this); //for different requests will be different instance hashcode
+        boolean loginResult = false;
         if ("natalie".equals(username) && "password".equals(password)) {
-            return true;
+            loginResult = true;
+            /*Store username in the session bean*/
+            loggedUserManagementService.setUsername(username);
         } else {
-            return false;
+            loginResult = false;
         }
+        return loginResult;
     }
 
     public String getUsername() {
