@@ -1,6 +1,7 @@
 package com.example.springstartherepart2.controller;
 
 import com.example.springstartherepart2.service.LoggedUserManagementService;
+import com.example.springstartherepart2.service.LoginCountService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
@@ -16,16 +17,20 @@ import org.springframework.web.context.annotation.RequestScope;
 public class LoginProcessor {
 
     private final LoggedUserManagementService loggedUserManagementService;
+    private final LoginCountService loginCountService;
 
     /*The bean stores the credentials as attributes*/
     private String username;
     private String password;
 
-    public LoginProcessor(LoggedUserManagementService loggedUserManagementService) {
+    public LoginProcessor(LoggedUserManagementService loggedUserManagementService,
+                          LoginCountService loginCountService) {
         this.loggedUserManagementService = loggedUserManagementService;
+        this.loginCountService = loginCountService;
     }
 
     public boolean login() {
+        loginCountService.increment();
         /*Get attributes from the request*/
         String username = this.getUsername();
         String password = this.getPassword();
