@@ -1,4 +1,4 @@
-package com.example.springstartherepart2.model;
+package com.example.springstartherepart2.ch7_10.model;
 
 public class Country {
 

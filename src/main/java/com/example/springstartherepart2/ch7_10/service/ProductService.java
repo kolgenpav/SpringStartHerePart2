@@ -1,6 +1,6 @@
-package com.example.springstartherepart2.service;
+package com.example.springstartherepart2.ch7_10.service;
 
-import com.example.springstartherepart2.model.Product;
+import com.example.springstartherepart2.ch7_10.model.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

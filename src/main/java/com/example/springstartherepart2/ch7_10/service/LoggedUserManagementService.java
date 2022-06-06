@@ -1,4 +1,4 @@
-package com.example.springstartherepart2.service;
+package com.example.springstartherepart2.ch7_10.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;

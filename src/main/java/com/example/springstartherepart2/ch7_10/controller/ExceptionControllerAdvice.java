@@ -1,7 +1,7 @@
-package com.example.springstartherepart2.controller;
+package com.example.springstartherepart2.ch7_10.controller;
 
-import com.example.springstartherepart2.NotEnoughMoneyException;
-import com.example.springstartherepart2.model.ErrorDetails;
+import com.example.springstartherepart2.ch7_10.NotEnoughMoneyException;
+import com.example.springstartherepart2.ch7_10.model.ErrorDetails;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

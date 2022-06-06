@@ -1,7 +1,7 @@
-package com.example.springstartherepart2.controller;
+package com.example.springstartherepart2.ch7_10.controller;
 
-import com.example.springstartherepart2.model.PaymentDetails;
-import com.example.springstartherepart2.service.PaymentService;
+import com.example.springstartherepart2.ch7_10.model.PaymentDetails;
+import com.example.springstartherepart2.ch7_10.service.PaymentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.logging.Logger;
 
 @Controller
-public class PaymentController {
+public class PaymentControllerFirst {
 
-    private static Logger logger = Logger.getLogger(PaymentController.class.getName());
+    private static Logger logger = Logger.getLogger(PaymentControllerFirst.class.getName());
 
     private final PaymentService paymentService;
 
-    public PaymentController(PaymentService paymentService) {
+    public PaymentControllerFirst(PaymentService paymentService) {
         this.paymentService = paymentService;
     }
 
@@ -44,10 +44,11 @@ public class PaymentController {
 */
     /*We must write amount in the request body in Postman
     * with curl in Windows:
-    * curl -X POST http://localhost:8080/payment -H "Content-Type: application/json"
+    * curl -X POST http://localhost:8080/paymentbody -H "Content-Type: application/json"
     * -d "{\"amount\": 150.0}" WE NEED ESCAPE QUOTES IN JSON*/
-    @PostMapping("/payment")
-    public ResponseEntity<PaymentDetails> makePayment(@RequestBody PaymentDetails paymentDetails) {
+    @PostMapping("/paymentbody")
+    public ResponseEntity<PaymentDetails> makePayment(
+            @RequestBody PaymentDetails paymentDetails) {
         double amountFromRequestBody = paymentDetails.getAmount();
         logger.info("Received payment " + amountFromRequestBody);
         paymentService.processPayment(amountFromRequestBody);

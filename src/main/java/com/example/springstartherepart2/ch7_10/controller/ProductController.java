@@ -1,14 +1,11 @@
-package com.example.springstartherepart2.controller;
+package com.example.springstartherepart2.ch7_10.controller;
 
-import com.example.springstartherepart2.model.Product;
-import com.example.springstartherepart2.service.ProductService;
+import com.example.springstartherepart2.ch7_10.model.Product;
+import com.example.springstartherepart2.ch7_10.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Through a browser’s HTML form process directly, you can use only HTTP GET and HTTP

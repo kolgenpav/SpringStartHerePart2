@@ -1,4 +1,4 @@
-package com.example.springstartherepart2;
+package com.example.springstartherepart2.ch7_10;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

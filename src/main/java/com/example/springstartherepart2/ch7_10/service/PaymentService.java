@@ -1,7 +1,7 @@
-package com.example.springstartherepart2.service;
+package com.example.springstartherepart2.ch7_10.service;
 
-import com.example.springstartherepart2.NotEnoughMoneyException;
-import com.example.springstartherepart2.model.PaymentDetails;
+import com.example.springstartherepart2.ch7_10.NotEnoughMoneyException;
+import com.example.springstartherepart2.ch7_10.model.PaymentDetails;
 import org.springframework.stereotype.Service;
 
 @Service

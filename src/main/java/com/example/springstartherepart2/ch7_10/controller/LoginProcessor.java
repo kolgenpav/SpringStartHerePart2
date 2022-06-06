@@ -1,7 +1,7 @@
-package com.example.springstartherepart2.controller;
+package com.example.springstartherepart2.ch7_10.controller;
 
-import com.example.springstartherepart2.service.LoggedUserManagementService;
-import com.example.springstartherepart2.service.LoginCountService;
+import com.example.springstartherepart2.ch7_10.service.LoggedUserManagementService;
+import com.example.springstartherepart2.ch7_10.service.LoginCountService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 

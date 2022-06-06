@@ -1,4 +1,4 @@
-package com.example.springstartherepart2.controller;
+package com.example.springstartherepart2.ch7_10.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
