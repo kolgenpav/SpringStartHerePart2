@@ -1,4 +1,4 @@
-package com.example.springstartherepart2.ch11.model;
+package com.example.springstartherepart2.ch11_resttemplate.model;
 
 public class Payment {
     private String id;
